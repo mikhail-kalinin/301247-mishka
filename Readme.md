@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Михаил Калинин](https://up.htmlacademy.ru/adaptive/10/user/301247).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Безуглый](https://htmlacademy.ru/profile/shalfey41).
 
 ---
 
