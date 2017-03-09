@@ -1,0 +1,7 @@
+.page-header {
+  margin: 0;
+  padding: 20px 0;
+  @mixin font bold, 17px, 24px, #000000;
+
+  background-color: #ffffff;
+}

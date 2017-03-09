@@ -1,0 +1,34 @@
+.modal-cart {
+  padding: 36px 9% 46px 9%;
+  @mixin font normal, 15px, 30px, #444444;
+
+  background-color: #ffffff;
+}
+
+.modal-cart__title {
+  @mixin font bold, 25px, 30px, #000000;
+}
+
+.modal-cart__text {
+  @mixin font normal, 15px, 30px, #444444;
+}
+
+.modal-cart__label {
+  padding: 18px 35px;
+
+  @mixin font bold, 17px, 17px, #444444;
+
+  background-color: #ffffff;
+  border: 2px solid #ececec;
+
+  &:hover {
+    border-color: #c7c7c7;
+  }
+}
+
+.modal-cart__add-btn {
+  @mixin font bold, 17px, 17px, #ffffff;
+
+  background-color: #63d1bb;
+  border: none;
+}

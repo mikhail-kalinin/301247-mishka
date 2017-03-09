@@ -1,0 +1,39 @@
+.reviews {
+  @mixin font normal, 15px, 30px, #444444;
+  background-color: #ffffff;
+}
+
+.reviews__title {
+  margin: 0;
+  margin-bottom: 37px;
+  @mixin font bold, 25px, 30px, #000000;
+}
+
+.reviews__blockquote {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 35px;
+}
+
+.reviews__author-name {
+  @mixin font bold, 18px, 24px, #000000;
+  font-style: normal;
+}
+
+.reviews__author-social {
+  @mixin font normal, 17px, 30px, #444444;
+  font-style: normal;
+}
+
+.reviews__prev {
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+}
+
+.reviews__controls {
+  margin-bottom: 38px;
+  padding: 12px 40px;
+
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+}

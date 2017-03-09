@@ -1,0 +1,14 @@
+.main-nav {
+  @mixin font bold, 17px, 24px, #000000;
+
+  background-color: #ffffff;
+
+  &--closed .main-nav__list {
+    display:none;
+  }
+}
+
+.main-nav__link {
+  @mixin font bold, 17px, 24px, #000000;
+  text-decoration: none;
+}
