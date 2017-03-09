@@ -1,0 +1,40 @@
+.contacts {
+  margin: 0;
+  padding: 40px 0;
+  @mixin font normal, 15px, 30px, #444444;
+
+  background-color: #ffffff;
+}
+
+.contacts__title {
+  margin: 0;
+  margin-bottom: 40px;
+  @mixin font bold, 18px, 30px, #000000;
+}
+
+.contacts__list {
+  padding: 0;
+}
+
+.contacts__item {
+  margin: 0;
+  margin-bottom: 40px;
+
+  list-style: none;
+}
+
+.contacts__item-value {
+  @mixin font normal, 15px, 30px, #444444;
+
+  &--email {
+    text-decoration: none;
+  }
+}
+
+.contacts__interactive-map {
+  margin-bottom: 39px;
+  /*для наглядности добавил размер*/
+  width: 320px;
+  height: 457px;
+  background: #eae6dd url("../img/map-mobile@1x.jpg") no-repeat;
+}

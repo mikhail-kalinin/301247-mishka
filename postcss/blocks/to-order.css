@@ -1,0 +1,39 @@
+.to-order {
+  @mixin font normal, 13px, 24px, #444444;
+
+  background-color: #ffffff;
+}
+
+.to-order__title {
+  margin: 0;
+  padding: 75px 0;
+  @mixin font bold, 27px, 30px, #231f20;
+  text-align: center;
+
+  background-color: #f1f1f1;
+}
+
+.to-order__wrapper {
+  padding-top: 29px;
+  padding-bottom: 55px;
+}
+
+.to-order__desc {
+  @mixin font normal, 13px, 24px, #444444;
+}
+
+.to-order__legend {
+  @mixin font bold, 17px, 17px, #63d1bb;
+}
+
+.to-order__label {
+  @mixin font bold, 17px, 18px, #000000;
+}
+
+.to-order__input {
+  @mixin font normal, 17px, 18px, #444444;
+}
+
+.to-order__tip {
+  @mixin font normal bold, 14px, 16px, #444444;
+}

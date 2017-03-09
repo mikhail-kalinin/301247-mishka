@@ -1,0 +1,31 @@
+.features {
+  margin-bottom: 60px;
+
+  @mixin font bold, 17px, 20px, #000000;
+  background-color: #ffffff;
+}
+
+.features__title {
+  margin: 0;
+  margin-bottom: 27px;
+  padding: 0;
+  @mixin font bold, 25px, 30px, #000000;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+}
+
+.features__item {
+  padding: 0;
+  padding-top: 58px;
+  margin: 0;
+  margin-bottom: 30px;
+
+  list-style: none;
+}
+
+.features__text {
+  margin: 0;
+}

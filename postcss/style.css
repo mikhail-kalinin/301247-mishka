@@ -1,0 +1,25 @@
+@import "variables.css";
+@import "mixins.css";
+
+@import "global/fonts.css";
+@import "global/box-sizing.css";
+@import "global/body.css";
+
+@import "blocks/page-header.css";
+@import "blocks/main-nav.css";
+@import "blocks/page-footer.css";
+@import "blocks/modal-cart.css";
+@import "blocks/visually-hidden.css";
+@import "blocks/center-wrapper.css";
+@import "blocks/btn.css";
+
+@import "blocks/intro.css";
+@import "blocks/featured-items.css";
+@import "blocks/about-us.css";
+@import "blocks/features.css";
+@import "blocks/reviews.css";
+@import "blocks/contacts.css";
+
+@import "blocks/catalog.css";
+@import "blocks/video.css";
+@import "blocks/to-order.css";

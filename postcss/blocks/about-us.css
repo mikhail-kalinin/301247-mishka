@@ -1,0 +1,7 @@
+.about-us {
+  margin: 0;
+  padding: 33px 0;
+  @mixin font bold, 17px, 20px, #000000;
+
+  background-color: #ffffff;
+}

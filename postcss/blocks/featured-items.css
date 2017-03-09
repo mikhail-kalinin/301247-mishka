@@ -1,0 +1,50 @@
+.featured-items {
+  padding: 33px 0;
+  @mixin font normal, 15px, 24px, #444444;
+  background-color: #ffffff;
+}
+
+.featured-items__name {
+  margin-bottom: 10px;
+  padding: 0;
+  @mixin font bold, 25px, 30px, #000000;
+}
+
+.featured-items__item-of-week {
+  padding: 0;
+  margin-bottom: 18px;
+  @mixin font bold, 17px, 20px, #63d1bb;
+}
+
+.featured-items__desc {
+  padding: 0;
+  margin-bottom: 32px;
+  @mixin font normal, 15px, 24px, #444444;
+}
+
+.featured-items__spec-list {
+  padding: 0;
+  margin-bottom: 28px;
+}
+
+.featured-items__spec-item {
+  padding: 10px 0;
+  @mixin font normal, 15px, 20px, #444444;
+
+  list-style: none;
+  border-bottom: 1px solid #ececec;
+}
+
+.featured-items__image {
+  padding: 0;
+  margin-bottom: 29px;
+}
+
+.featured-items__price {
+  display: block;
+  margin-bottom: 25px;
+  padding: 0;
+
+  @mixin font bold, 17px, 24px, #444444;
+  text-align: center;
+}
