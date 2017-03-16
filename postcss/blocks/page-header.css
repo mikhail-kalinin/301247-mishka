@@ -1,7 +1,61 @@
 .page-header {
-  margin: 0;
-  padding: 20px 0;
+  margin: 0 auto;
+  padding: 0;
   @mixin font bold, 17px, 24px, #000000;
 
   background-color: #ffffff;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+
+.page-header__wrapper {
+  margin: 0 auto;
+  width: 320px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.page-header__logo {
+  padding-top: 21px;
+  padding-bottom: 16px;
+}
+
+.page-header__delivery-info {
+  display: none;
+  @mixin font normal 15px 24px #444444;
+}
+
+@media ($tablet-widths) {
+  .page-header {
+    border-top: none;
+
+    /*для наглядности*/
+    min-height: 89px;
+  }
+
+  .page-header__wrapper {
+    width: 768px;
+  }
+
+  .page-header__delivery-info {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    bottom: -42px;
+    right: 50px;
+  }
+}
+
+@media ($desktop-widths) {
+  .page-header {
+    border-top: none;
+
+    /*для наглядности*/
+    min-height: 89px;
+  }
+
+  .page-header__wrapper {
+    width: 1150px;
+  }
 }

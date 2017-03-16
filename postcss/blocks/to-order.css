@@ -6,7 +6,8 @@
 
 .to-order__title {
   margin: 0;
-  padding: 75px 0;
+  padding-top: 70px;
+  padding-bottom: 76px;
   @mixin font bold, 27px, 30px, #231f20;
   text-align: center;
 
@@ -14,16 +15,46 @@
 }
 
 .to-order__wrapper {
-  padding-top: 29px;
+  padding-top: 22px;
   padding-bottom: 55px;
 }
 
+.to-order__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.to-order__fieldset-wrapper {
+}
+
+.to-order__field-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .to-order__desc {
+  margin: 0;
+  margin-bottom: 23px;
   @mixin font normal, 13px, 24px, #444444;
 }
 
 .to-order__legend {
+  position: relative;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 0;
   @mixin font bold, 17px, 17px, #63d1bb;
+  &::after {
+    position: absolute;
+    top: 9px;
+    right: 0;
+    content: "";
+    height: 1px;
+    width: 198px;
+    background-color: #62d1ba;
+  }
 }
 
 .to-order__label {
@@ -36,4 +67,31 @@
 
 .to-order__tip {
   @mixin font normal bold, 14px, 16px, #444444;
+}
+
+@media ($tablet-widths) {
+  .to-order__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .to-order__fieldset {
+    width: 100%;
+  }
+  .to-order__fieldset-wrapper {
+    display: flex;
+  }
+  .to-order__legend {
+    width: 167px;
+    &::after {
+      display: none;
+    }
+  }
+  .to-order__tip {
+    order: 1;
+    min-width: 350px;
+  }
+  .to-order .btn {
+    width: 230px;
+  }
 }

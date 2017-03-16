@@ -1,5 +1,5 @@
 .features {
-  margin-bottom: 60px;
+  margin-bottom: 55px;
 
   @mixin font bold, 17px, 20px, #000000;
   background-color: #ffffff;
@@ -7,8 +7,8 @@
 
 .features__title {
   margin: 0;
-  margin-bottom: 27px;
   padding: 0;
+  margin-bottom: 29px;
   @mixin font bold, 25px, 30px, #000000;
 }
 
@@ -18,14 +18,81 @@
 }
 
 .features__item {
+  position: relative;
   padding: 0;
-  padding-top: 58px;
+  padding-top: 57px;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 
   list-style: none;
+
+  &::before {
+    content: "";
+    height: 38px;
+    width: 55px;
+    margin-left: -6px;
+    position: absolute;
+    top: 0;
+  }
+
+  &--flower::before {
+    background: url("../img/icon-feature-1.svg") no-repeat 50% 50%;
+  }
+  &--money::before {
+    background: url("../img/icon-feature-3.svg") no-repeat 50% 50%;
+  }
+  &--like::before {
+    background: url("../img/icon-feature-5.svg") no-repeat 50% 50%;
+  }
+  &--ball::before {
+    background: url("../img/icon-feature-2.svg") no-repeat 50% 50%;
+  }
+  &--rocket::before {
+    background: url("../img/icon-feature-4.svg") no-repeat 50% 50%;
+  }
+  &--heart::before {
+    background: url("../img/icon-feature-6.svg") no-repeat 50% 50%;
+  }
 }
 
 .features__text {
   margin: 0;
+}
+
+@media ($tablet-widths) {
+  .features {
+    margin-bottom: 28px;
+  }
+  .features__wrapper {
+    padding-top: 50px;
+  }
+  .features__title {
+    margin-bottom: 47px;
+    margin-left: -4px;
+    @mixin font bold 43px 50px #000000;
+  }
+  .features__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 465px;
+  }
+  .features__item {
+    margin-bottom: 53px;
+    @mixin font bold 20px 22px #000000;
+    width: 334px;
+  }
+}
+
+@media ($desktop-widths) {
+  .features {
+    margin-bottom: 35px;
+  }
+  .features__wrapper {
+    padding-left: 225px;
+    padding-right: 225px;
+  }
+  .features__title {
+    @mixin font bold 53px 57px #000000;
+  }
 }

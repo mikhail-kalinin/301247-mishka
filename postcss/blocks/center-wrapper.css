@@ -1,3 +1,20 @@
 .center-wrapper {
-  padding: 0 9%;
+  padding: 0 30px;
+  margin: 0 auto;
+  width: 320px;
+}
+
+@media ($tablet-widths) {
+  .center-wrapper {
+    padding: 0 50px;
+    margin: 0 auto;
+    width: 768px;
+  }
+}
+
+@media ($desktop-widths) {
+  .center-wrapper {
+    margin: 0 auto;
+    width: 1150px;
+  }
 }

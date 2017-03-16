@@ -1,7 +1,8 @@
 .btn {
   display: block;
-  padding: 17px;
+  padding: 14px;
   width: 100%;
+  text-transform: uppercase;
 
   @mixin font bold, 17px, 20px, #444444;
   text-align: center;
