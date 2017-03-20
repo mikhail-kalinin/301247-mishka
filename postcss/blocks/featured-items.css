@@ -4,7 +4,10 @@
   padding: 0;
   padding-top: 27px;
   padding-bottom: 42px;
-  @mixin font normal, 15px, 24px, #444444;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #444444;
   background-color: #ffffff;
   &::after {
     position: absolute;
@@ -17,24 +20,25 @@
   }
 }
 
-.featured-items__wrapper {
-  margin: 0 auto;
-  width: 320px;
-}
-
 .featured-items__name {
   margin: 0;
   margin-bottom: 5px;
   padding: 0;
   padding-left: 1px;
-  @mixin font bold, 25px, 30px, #000000;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #000000;
 }
 
 .featured-items__item-of-week {
   display: block;
   padding: 0;
   margin-bottom: 24px;
-  @mixin font bold, 17px, 20px, #63d1bb;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #63d1bb;
   text-transform: uppercase;
 }
 
@@ -42,7 +46,14 @@
   margin: 0;
   padding: 0;
   margin-bottom: 18px;
-  @mixin font normal, 15px, 24px, #444444;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #444444;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #444444;
 }
 
 .featured-items__spec-list {
@@ -53,7 +64,10 @@
 .featured-items__spec-item {
   display: flex;
   padding: 9px 0;
-  @mixin font normal, 15px, 20px, #444444;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: normal;
+  color: #444444;
 
   list-style: none;
   border-bottom: 1px solid #ececec;
@@ -76,8 +90,10 @@
   display: block;
   margin-bottom: 25px;
   padding: 0;
-
-  @mixin font bold, 17px, 24px, #444444;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #444444;
   text-align: center;
 }
 
@@ -91,9 +107,6 @@
     background: url("../img/border-pattern-tablet-gray.png") repeat-x;
     opacity: 0.6;
   }
-  .featured-items__wrapper {
-    width: 768px;
-  }
   .featured-items__item-title {
     margin-bottom: 57px;
     display: flex;
@@ -106,13 +119,15 @@
     margin-left: -3px;
     margin-bottom: 0;
     padding-left: 0;
-    @mixin font bold 43px 50px #000000;
+    font-size: 43px;
+    line-height: 50px;
     flex-basis: 501px;
     flex-grow: 1;
   }
   .featured-items__item-of-week {
     margin-bottom: 0;
-    @mixin font bold 17px 17px #63d1bb;
+    font-size: 17px;
+    line-height: 17px;
     flex-basis: 126px;
     text-align: center;
   }
@@ -127,7 +142,8 @@
   .featured-items__desc {
     margin-top: -8px;
     margin-left: -2px;
-    @mixin font normal 17px 30px #444444;
+    font-size: 17px;
+    line-height: 30px;
     width: 290px;
     order: 1;
   }
@@ -145,7 +161,8 @@
     order: 5;
   }
   .featured-items__price {
-    @mixin font bold 20px 24px #444444;
+    font-size: 20px;
+    line-height: 24px;
     width: 290px;
     order: 3;
   }
@@ -165,9 +182,6 @@
     background: url("../img/border-pattern-desktop-gray.png") repeat-x;
     opacity: 0.6;
   }
-  .featured-items__wrapper {
-    width: 1150px;
-  }
   .featured-items__item {
     position: relative;
   }
@@ -178,7 +192,8 @@
   }
   .featured-items__name {
     padding-left: 28px;
-    @mixin font bold 53px 57px #000000;
+    font-size: 53px;
+    line-height: 57px;
     order: 2;
   }
   .featured-items__item-of-weel {

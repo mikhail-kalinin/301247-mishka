@@ -1,7 +1,9 @@
 .features {
   margin-bottom: 55px;
-
-  @mixin font bold, 17px, 20px, #000000;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #000000;
   background-color: #ffffff;
 }
 
@@ -9,7 +11,10 @@
   margin: 0;
   padding: 0;
   margin-bottom: 29px;
-  @mixin font bold, 25px, 30px, #000000;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #000000;
 }
 
 .features__list {
@@ -69,7 +74,8 @@
   .features__title {
     margin-bottom: 47px;
     margin-left: -4px;
-    @mixin font bold 43px 50px #000000;
+    font-size: 43px;
+    line-height: 50px;
   }
   .features__list {
     display: flex;
@@ -79,7 +85,8 @@
   }
   .features__item {
     margin-bottom: 53px;
-    @mixin font bold 20px 22px #000000;
+    font-size: 20px;
+    line-height: 22px;
     width: 334px;
   }
 }
@@ -93,6 +100,7 @@
     padding-right: 225px;
   }
   .features__title {
-    @mixin font bold 53px 57px #000000;
+    font-size: 53px;
+    line-height: 57px;
   }
 }

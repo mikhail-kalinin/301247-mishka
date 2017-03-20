@@ -1,17 +1,19 @@
+@import "global/normalize.css";
+
 @import "variables.css";
-@import "mixins.css";
 
 @import "global/fonts.css";
-@import "global/box-sizing.css";
 @import "global/body.css";
+@import "global/input.css";
+@import "global/img.css";
 
+@import "blocks/center-wrapper.css";
 @import "blocks/page-header.css";
 @import "blocks/main-nav.css";
 @import "blocks/page-footer.css";
-@import "blocks/modal-cart.css";
 @import "blocks/visually-hidden.css";
-@import "blocks/center-wrapper.css";
 @import "blocks/btn.css";
+@import "blocks/modal-cart.css";
 
 @import "blocks/intro.css";
 @import "blocks/featured-items.css";

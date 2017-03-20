@@ -1,8 +1,12 @@
 .reviews {
+  box-sizing: border-box;
   position: relative;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   padding-bottom: 51px;
-  @mixin font normal, 15px, 30px, #444444;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #444444;
   background-color: #ffffff;
   &::after {
     position: absolute;
@@ -16,13 +20,17 @@
 }
 
 .reviews__wrapper {
+  box-sizing: border-box;
   position: relative;
 }
 
 .reviews__title {
   margin: 0;
   margin-bottom: 24px;
-  @mixin font bold, 25px, 30px, #000000;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #000000;
 }
 
 .reviews__blockquote {
@@ -36,12 +44,18 @@
 }
 
 .reviews__author-name {
-  @mixin font bold, 18px, 24px, #000000;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #000000;
   font-style: normal;
 }
 
 .reviews__author-social {
-  @mixin font normal, 17px, 30px, #444444;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #444444;
   font-style: normal;
 }
 
@@ -67,6 +81,7 @@
     content: "";
     width: 51px;
     height: 26px;
+    transition: 150ms;
   }
   &--prev::after {
     background: url("../img/icon-left-arrow.svg") no-repeat;
@@ -80,6 +95,13 @@
   border: 1px solid #ececec;
   border-right: none;
   padding-right: 41px;
+}
+
+.reviews__btn:hover::after {
+  opacity: 0.6;
+}
+.reviews__btn:active::after {
+  opacity: 0.3;
 }
 
 @media ($tablet-widths) {
@@ -99,16 +121,19 @@
   .reviews__title {
     margin-bottom: 48px;
     margin-left: -5px;
-    @mixin font bold 43px 50px #000000;
+    font-size: 43px;
+    line-height: 50px;
   }
   .reviews__text {
     margin-bottom: 58px;
-    @mixin font normal 17px 30px #444444;
+    font-size: 17px;
+    line-height: 30px;
   }
   .reviews__author-name {
     margin-bottom: 3px;
     display: block;
-    @mixin font bold 17px 24px #000000;
+    font-size: 17px;
+    line-height: 24px;
   }
   .reviews__controls {
     position: absolute;
@@ -149,7 +174,8 @@
     opacity: 0.6;
   }
   .reviews__title {
-    @mixin font bold 53px 57px #000000;
+    font-size: 53px;
+    line-height: 57px;
   }
   .reviews__text {
     margin-bottom: 40px;

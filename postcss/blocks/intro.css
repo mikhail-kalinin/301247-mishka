@@ -1,34 +1,44 @@
 .intro {
-  @mixin font bold, 19px, 24px, #010000;
-
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #010000;
   background-color: #fafafa;
   background-image: url("../img/hero-mobile@1x.jpg");
-  background-position: 49.5% -16%;
+  background-position: 49.5% -19px;
   background-repeat: no-repeat;
 }
 
 .intro__wrapper {
   margin: 0 auto;
-  width: 320px;
+  box-sizing: border-box;
 }
 
 .intro__title {
-  margin: 0 10%;
+  width: 260px;
+  margin: 0 auto;
   padding: 70px 0 122px 0;
-  @mixin font bold, 27px, 30px, #010000;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #010000;
   text-align: center;
 }
 
 .intro__link {
+  box-sizing: border-box;
   position: relative;
   padding-top: 25px;
   padding-bottom: 30px;
-  padding-left: 9%;
-  padding-right: 40%;
+  padding-left: 30px;
+  padding-right: 30px;
   display: block;
-  @mixin font bold, 19px, 24px, #ffffff;
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #ffffff;
   text-decoration: none;
-
+  transition: 150ms;
   &--accessory {
     background-color: #63d1bb;
   }
@@ -37,32 +47,62 @@
   }
 }
 
-.intro__link--accessory::after {
-  position: absolute;
-  content: "";
-  width: 42px;
-  height: 62px;
-  right: 11%;
-  top: 23px;
-  background: url("../img/icon-interior.svg");
-  background-size: 42px 62px;
+.intro__link-text {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  width: 260px;
+  padding-right: 130px;
+  transition: 150ms;
+  &--accessory::after {
+    position: absolute;
+    content: "";
+    width: 42px;
+    height: 62px;
+    right: 5px;
+    top: -2px;
+    background: url("../img/icon-interior.svg");
+    background-size: 42px 62px;
+    opacity: 0.5;
+    transition: 150ms;
+  }
+  &--toys::after {
+    position: absolute;
+    content: "";
+    width: 61px;
+    height: 61px;
+    right: -4px;
+    top: -5px;
+    background: url("../img/icon-toy.svg");
+    background-size: 61px 61px;
+    opacity: 0.5;
+    transition: 150ms;
+  }
 }
 
-.intro__link--toys::after {
-  position: absolute;
-  content: "";
-  width: 61px;
-  height: 61px;
-  right: 8%;
-  top: 20px;
-  background: url("../img/icon-toy.svg");
-  background-size: 61px 61px;
+.intro__link:hover .intro__link-text {
+  padding-bottom: 5px;
+  &::after {
+    opacity: 0.7;
+  }
+}
+.intro__link:active .intro__link-text {
+  padding-bottom: 5px;
+  color: rgba(255, 255, 255, 0.3);
+  &::after {
+    opacity: 0.3;
+  }
 }
 
 @media ($tablet-widths) {
   .intro {
     position: relative;
     margin-bottom: 22px;
+    background-color: #fafafa;
+    background-image: url("../img/hero-desktop.jpg");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
   }
   .intro::after {
     position: absolute;
@@ -81,23 +121,38 @@
   }
 
   .intro__title {
+    width: 100%;
     padding-top: 153px;
     padding-bottom: 373px;
     margin: 0;
-    @mixin font bold 43px 50px #000000;
+    font-size: 43px;
+    line-height: 50px;
   }
   .intro__link {
-    @mixin font bold 20px 30px #ffffff;
+    font-size: 20px;
+    line-height: 30px;
     padding-top: 28px;
     padding-left: 35px;
     flex-grow: 1;
     width: 50%;
+  }
+  .intro__link-text {
+    margin: 0;
+  }
+  .intro__link-text--accessory::after {
+    top: 2px;
+    right: -4px;
+  }
+  .intro__link-text--toys::after {
+    top: 3px;
+    right: -5px;
   }
 }
 
 @media ($desktop-widths) {
   .intro {
     margin-bottom: 46px;
+    background-position: 52% -1px;
   }
   .intro::after {
     bottom: -18px;
@@ -112,6 +167,14 @@
     padding-top: 153px;
     padding-bottom: 359px;
     margin: 0;
-    @mixin font bold 53px 57px #000000;
+    font-size: 53px;
+    line-height: 57px;
+  }
+  .intro__link {
+    padding-left: 37px;
+  }
+  .intro__link-text {
+    padding-right: 300px;
+    width: 449px;
   }
 }

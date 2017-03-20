@@ -1,13 +1,18 @@
 .page-footer {
   margin: 0;
   padding: 23px 0;
-  @mixin font bold, 19px, 19px, #000000;
-
+  font-size: 19px;
+  line-height: 19px;
+  font-weight: bold;
+  color: #000000;
   background-color: #f1f1f1;;
 }
 
 .page-footer__title {
-  @mixin font bold, 19px, 19px, #000000;
+  font-size: 19px;
+  line-height: 19px;
+  font-weight: bold;
+  color: #000000;
 }
 
 .page-footer__logo {

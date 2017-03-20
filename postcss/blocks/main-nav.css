@@ -1,7 +1,10 @@
 .main-nav {
   display: flex;
   justify-content: space-between;
-  @mixin font bold, 17px, 24px, #000000;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #000000;
 
   background-color: #ffffff;
 
@@ -58,8 +61,12 @@
 
 .main-nav__link {
   position: relative;
-  @mixin font bold, 17px, 24px, #000000;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #000000;
   text-decoration: none;
+  transition: 150ms;
   &--search::before {
     content: "";
     position: absolute;
@@ -69,6 +76,7 @@
     height: 19px;
     background: #ffffff url("../img/icon-search.svg") no-repeat;
     opacity: 0.2;
+    transition: 150ms;
   }
   &--cart::before {
     content: "";
@@ -79,6 +87,7 @@
     height: 19px;
     background: #ffffff url("../img/icon-cart.svg") no-repeat;
     opacity: 0.2;
+    transition: 150ms;
   }
 }
 
@@ -108,6 +117,26 @@
   height: 20px;
 }
 
+.main-nav__link:hover {
+  opacity: 0.6;
+}
+
+.main-nav__link:active {
+  opacity: 0.3;
+}
+
+.main-nav__current:hover {
+  opacity: 1;
+}
+
+.main-nav__current:active {
+  opacity: 1;
+}
+
+.main-nav__link:hover::before {
+  opacity: 1;
+}
+
 @media ($tablet-widths) {
   .main-nav__toggle {
     display: none;
@@ -119,7 +148,8 @@
     }
   }
   .main-nav__list--nav .main-nav__link {
-    @mixin font bold 15px 24px #000000;
+    font-size: 15px;
+    line-height: 24px;
   }
   .main-nav__list--nav {
     position: absolute;
@@ -154,7 +184,8 @@
     display: flex;
   }
   .main-nav__list--nav .main-nav__link {
-    @mixin font bold 17px 24px #000000;
+    font-size: 17px;
+    line-height: 24px;
   }
   .main-nav__list {
     width: 400px;
@@ -165,7 +196,8 @@
     position: static;
   }
   .main-nav__list--add .main-nav__link {
-    @mixin font bold 15px 24px #000000;
+    font-size: 15px;
+    line-height: 24px;
   }
   .main-nav__list--add {
     position: absolute;

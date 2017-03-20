@@ -1,16 +1,20 @@
 .page-header {
   margin: 0 auto;
   padding: 0;
-  @mixin font bold, 17px, 24px, #000000;
-
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #000000;
   background-color: #ffffff;
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
 }
 
 .page-header__wrapper {
+  box-sizing: border-box;
+  width: 100%;
   margin: 0 auto;
-  width: 320px;
+  padding: 0 30px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -23,7 +27,30 @@
 
 .page-header__delivery-info {
   display: none;
-  @mixin font normal 15px 24px #444444;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #444444;
+}
+
+.page-header__link {
+  transition: 150ms;
+}
+
+.page-header__link:hover {
+  opacity: 0.6;
+}
+
+.page-header__link:active {
+  opacity: 0.3;
+}
+
+.page-header__current:hover {
+  opacity: 1;
+}
+
+.page-header__current:active {
+  opacity: 1;
 }
 
 @media ($tablet-widths) {
@@ -36,6 +63,8 @@
 
   .page-header__wrapper {
     width: 768px;
+    padding: 0 50px;
+    margin: 0 auto;
   }
 
   .page-header__delivery-info {
@@ -57,5 +86,6 @@
 
   .page-header__wrapper {
     width: 1150px;
+    margin: 0 auto;
   }
 }

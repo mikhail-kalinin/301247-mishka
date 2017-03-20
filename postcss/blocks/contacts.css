@@ -3,7 +3,10 @@
   padding: 0;
   padding-top: 30px;
   padding-bottom: 39px;
-  @mixin font normal, 15px, 30px, #444444;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #444444;
 
   background-color: #ffffff;
 }
@@ -15,7 +18,10 @@
 .contacts__title {
   margin: 0;
   margin-bottom: 26px;
-  @mixin font bold, 18px, 30px, #000000;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #000000;
 }
 
 .contacts__list {
@@ -37,11 +43,15 @@
 
 .contacts__item-value {
   flex-basis: 165px;
-  @mixin font normal, 15px, 30px, #444444;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #444444;
 
   &--email {
     text-decoration: none;
     border-bottom: 1px solid #62d1ba;
+    transition: 150ms;
   }
 }
 
@@ -63,6 +73,16 @@
   background: #eae6dd url("../img/map-mobile@1x.jpg") 50% 50% no-repeat;
 }
 
+.contacts__item-value--email:hover {
+  color: rgba(70, 193, 174, 1);
+  border-bottom-color: rgba(70, 193, 174, 1);
+}
+
+.contacts__item-value--email:active {
+  color: rgba(70, 193, 174, 0.3);
+  border-bottom-color: rgba(70, 193, 174, 0.1);
+}
+
 @media ($tablet-widths) {
   .contacts {
     padding-top: 42px;
@@ -80,7 +100,8 @@
   .contacts__title {
     padding-top: 15px;
     margin-bottom: 49px;
-    @mixin font bold 43px 50px #000000;
+    font-size: 43px;
+    line-height: 50px;
   }
   .contacts__list {
     margin-bottom: 26px;
@@ -89,11 +110,13 @@
   }
   .contacts__item {
     flex-basis: 334px;
-    @mixin font normal, 17px, 30px, #444444;
+    font-size: 17px;
+    line-height: 30px;
   }
   .contacts__item-value {
     flex-grow: 1;
-    @mixin font normal, 17px, 30px, #444444;
+    font-size: 17px;
+    line-height: 30px;
     &--email {
       flex-grow: 0;
     }
@@ -132,7 +155,8 @@
     padding-top: 70px;
     width: 300px;
     order: 1;
-    @mixin font bold 53px 57px #000000;
+    font-size: 53px;
+    line-height: 57px;
   }
   .contacts__list {
     flex-wrap: wrap;

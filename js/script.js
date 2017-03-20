@@ -26,3 +26,32 @@ function initMap() {
     icon: image
   });
 }
+
+/*Модальное окно*/
+var link = document.querySelector("#add-to-cart");
+
+var modal = document.querySelector(".modal-cart__wrapper");
+var overlay = document.querySelector(".modal-cart__overlay");
+
+link.addEventListener("click", function(event) {
+  event.preventDefault();
+  modal.classList.add("modal-cart__wrapper--show");
+  overlay.classList.add("modal-cart__overlay--show");
+});
+
+overlay.addEventListener("click", function(event) {
+  event.preventDefault();
+  modal.classList.remove("modal-cart__wrapper--show");
+  overlay.classList.remove("modal-cart__overlay--show");
+});
+
+
+
+window.addEventListener("keydown", function(event) {
+  if (event.keyCode === 27) {
+    if (modal.classList.contains("modal-cart__wrapper--show")) {
+      modal.classList.remove("modal-cart__wrapper--show");
+      overlay.classList.remove("modal-cart__overlay--show");
+    }
+  }
+});

@@ -10,7 +10,7 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__wrapper center-wrapper">
+      <div class="page-header__wrapper">
         <nav class="main-nav main-nav--closed">
           <a class="main-nav__toggle" href="#">Открыть меню</a>
           <ul class="main-nav__list main-nav__list--nav">
@@ -30,7 +30,7 @@
             </li>
           </ul>
           <div class="page-header__logo">
-            <a class="page-header__link">
+            <a class="page-header__link page-header__current">
               <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
             </a>
           </div>
@@ -50,8 +50,8 @@
       <section class="intro">
         <div class="intro__wrapper">
           <h1 class="intro__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
-          <a class="intro__link intro__link--accessory" href="#">Предметы интерьера</a>
-          <a class="intro__link intro__link--toys" href="#">Детские игрушки</a>
+          <a class="intro__link intro__link--accessory" href="#"><span class="intro__link-text intro__link-text--accessory">Предметы интерьера</span></a>
+          <a class="intro__link intro__link--toys" href="#"><span class="intro__link-text intro__link-text--toys">Детские игрушки</span></a>
         </div>
       </section>
       <section class="featured-items">
@@ -79,7 +79,7 @@
                 <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
               </div>
               <span class="featured-items__price">Цена: 990 руб.</span>
-              <a class="btn" href="#">Заказать</a>
+              <a class="btn" id="add-to-cart" href="#">Заказать</a>
             </div>
           </article>
         </div>
@@ -159,14 +159,15 @@
         </section>
       </div>
     </footer>
-    <div class="modal-cart visually-hidden">
-      <div class="modal-cart__wrapper">
-        <h2 class="modal-cart__title">Добавить в корзину</h2>
+    <div class="modal-cart">
+      <div class="modal-cart__overlay visually-hidden"></div>
+      <div class="modal-cart__wrapper visually-hidden">
+        <h2 class="modal-cart__title">Добавить в&nbsp;корзину</h2>
         <p class="modal-cart__text">Выберите размер:</p>
         <form class="modal-cart__form" action="https://echo.htmlacademy.ru" method="post">
-          <label class="modal-cart__label"><input class="modal-cart__radio visually-hidden" type="radio" name="size" value="s" checked>S</label>
-          <label class="modal-cart__label"><input class="modal-cart__radio visually-hidden" type="radio" name="size" value="m">M</label>
-          <label class="modal-cart__label"><input class="modal-cart__radio visually-hidden" type="radio" name="size" value="l">L</label>
+          <label class="modal-cart__label"><input class="modal-cart__radio" type="radio" name="size" value="s" checked>S</label>
+          <label class="modal-cart__label"><input class="modal-cart__radio" type="radio" name="size" value="m">M</label>
+          <label class="modal-cart__label"><input class="modal-cart__radio" type="radio" name="size" value="l">L</label>
           <button class="modal-cart__add-btn" type="submit">Добавить</button>
         </form>
       </div>
