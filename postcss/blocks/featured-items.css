@@ -1,50 +1,217 @@
 .featured-items {
-  padding: 33px 0;
-  @mixin font normal, 15px, 24px, #444444;
+  position: relative;
+  margin-bottom: 27px;
+  padding: 0;
+  padding-top: 27px;
+  padding-bottom: 42px;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #444444;
   background-color: #ffffff;
+  &::after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 7px;
+    background: url("../img/border-pattern-small.png") repeat-x;
+    opacity: 0.6;
+  }
 }
 
 .featured-items__name {
-  margin-bottom: 10px;
+  margin: 0;
+  margin-bottom: 5px;
   padding: 0;
-  @mixin font bold, 25px, 30px, #000000;
+  padding-left: 1px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #000000;
 }
 
 .featured-items__item-of-week {
+  display: block;
   padding: 0;
-  margin-bottom: 18px;
-  @mixin font bold, 17px, 20px, #63d1bb;
+  margin-bottom: 24px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #63d1bb;
+  text-transform: uppercase;
 }
 
 .featured-items__desc {
+  margin: 0;
   padding: 0;
-  margin-bottom: 32px;
-  @mixin font normal, 15px, 24px, #444444;
+  margin-bottom: 18px;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #444444;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #444444;
 }
 
 .featured-items__spec-list {
   padding: 0;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .featured-items__spec-item {
-  padding: 10px 0;
-  @mixin font normal, 15px, 20px, #444444;
+  display: flex;
+  padding: 9px 0;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: normal;
+  color: #444444;
 
   list-style: none;
   border-bottom: 1px solid #ececec;
 }
 
+.featured-items__spec-name {
+  flex-basis: 100px;
+}
+
+.featured-items__spec-value {
+  flex-basis: 165px;
+}
+
 .featured-items__image {
   padding: 0;
-  margin-bottom: 29px;
+  margin-bottom: 19px;
 }
 
 .featured-items__price {
   display: block;
   margin-bottom: 25px;
   padding: 0;
-
-  @mixin font bold, 17px, 24px, #444444;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #444444;
   text-align: center;
+}
+
+@media ($tablet-widths) {
+  .featured-items {
+    margin-bottom: 0;
+    padding-bottom: 68px;
+  }
+  .featured-items::after {
+    height: 17px;
+    background: url("../img/border-pattern-tablet-gray.png") repeat-x;
+    opacity: 0.6;
+  }
+  .featured-items__item-title {
+    margin-bottom: 57px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  .featured-items__name {
+    margin-top: -3px;
+    margin-left: -3px;
+    margin-bottom: 0;
+    padding-left: 0;
+    font-size: 43px;
+    line-height: 50px;
+    flex-basis: 501px;
+    flex-grow: 1;
+  }
+  .featured-items__item-of-week {
+    margin-bottom: 0;
+    font-size: 17px;
+    line-height: 17px;
+    flex-basis: 126px;
+    text-align: center;
+  }
+  .featured-items__content {
+    height: 404px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+  .featured-items__desc {
+    margin-top: -8px;
+    margin-left: -2px;
+    font-size: 17px;
+    line-height: 30px;
+    width: 290px;
+    order: 1;
+  }
+  .featured-items__spec-list {
+    margin-top: 10px;
+    margin-bottom: 49px;
+    width: 290px;
+    order: 2;
+  }
+  .featured-items__spec-name {
+    flex-basis: 96px;
+  }
+  .featured-items__image {
+    width: 334px;
+    order: 5;
+  }
+  .featured-items__price {
+    font-size: 20px;
+    line-height: 24px;
+    width: 290px;
+    order: 3;
+  }
+  .featured-items .btn {
+    width: 290px;
+    order: 4;
+  }
+}
+
+@media ($desktop-widths) {
+  .featured-items {
+    padding-bottom: 95px;
+    margin-bottom: 9px;
+  }
+  .featured-items::after {
+    height: 23px;
+    background: url("../img/border-pattern-desktop-gray.png") repeat-x;
+    opacity: 0.6;
+  }
+  .featured-items__item {
+    position: relative;
+  }
+  .featured-items__item-title {
+    position: absolute;
+    top: 54px;
+    left: 20px;
+  }
+  .featured-items__name {
+    padding-left: 28px;
+    font-size: 53px;
+    line-height: 57px;
+    order: 2;
+  }
+  .featured-items__item-of-weel {
+    order: 1;
+  }
+  .featured-items__content {
+    padding-left: 175px;
+    height: 636px;
+    justify-content: flex-end;
+  }
+  .featured-items__spec-list {
+    margin-top: 32px;
+  }
+  .featured-items__price {
+    margin-top: 62px;
+    margin-bottom: 35px;
+  }
+  .featured-items__image {
+    margin-bottom: 0;
+  }
 }

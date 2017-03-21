@@ -1,11 +1,101 @@
 .page-footer {
   margin: 0;
   padding: 23px 0;
-  @mixin font bold, 19px, 19px, #000000;
-
+  font-size: 19px;
+  line-height: 19px;
+  font-weight: bold;
+  color: #000000;
   background-color: #f1f1f1;;
 }
 
 .page-footer__title {
-  @mixin font bold, 19px, 19px, #000000;
+  font-size: 19px;
+  line-height: 19px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+.page-footer__socials {
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  padding-left: 52px;
+  padding-top: 6px;
+  padding-bottom: 31px;
+  margin-bottom: 11px;
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: center;
+}
+
+.page-footer__link {
+  position: relative;
+  text-indent: -9999px;
+  display: flex;
+  width: 27px;
+  margin-right: 33px;
+  &::after {
+    position: absolute;
+    content: "";
+    top:0;
+    right: 0;
+  }
+  &--inst::after {
+    width: 22px;
+    height: 21px;
+    background: url("../img/icon-insta.svg") no-repeat;
+  }
+  &--fb::after {
+    top: -5px;
+    left: 8px;
+    width: 15px;
+    height: 29px;
+    background: url("../img/icon-fb.svg") no-repeat;
+  }
+  &--twitter::after {
+    width: 24px;
+    height: 20px;
+    background: url("../img/icon-twitter.svg") no-repeat;
+  }
+  &--academy::after {
+    width: 41px;
+    height: 38px;
+    top: 8px;
+    right: -37px;
+    background: url("../img/htmlacademy.svg") no-repeat;
+    background-size: cover;
+  }
+}
+
+@media ($tablet-widths) {
+  .page-footer {
+    padding-top: 50px;
+    padding-bottom: 56px;
+  }
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .page-footer__logo {
+    display: flex;
+  }
+  .page-footer__socials {
+    border: none;
+    margin-bottom: 0;
+    margin-left: 120px;
+    margin-top: 14px;
+    padding: 0;
+  }
+  .page-footer__title {
+    margin: 0;
+    margin-top: 14px;
+  }
+  .page-footer__link {
+    width: 23px;
+  }
 }
