@@ -309,7 +309,8 @@
   .to-order__field-item {
     margin-bottom: 23px;
     &--name {
-      width: 501px;
+      flex-grow: 1;
+      max-width: 501px;
     }
   }
   .to-order__input--radio {
@@ -367,7 +368,7 @@
   }
   .to-order__field-list {
     display: flex;
-    width: 501px;
+    max-width: 501px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -438,14 +439,15 @@
     margin-right: 8px;
   }
   .to-order__field-list--checkbox {
-    width: 765px;
+    max-width: 765px;
 
   }
   .to-order__field-list--name {
-    width: 700px;
+    max-width: 700px;
   }
   .to-order__field-item--name {
     width: 100%;
+    max-width: 700px;
   }
   .to-order__label--phone {
     width: 700px;
