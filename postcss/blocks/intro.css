@@ -115,15 +115,17 @@
   .intro__wrapper {
     display: flex;
     flex-wrap: wrap;
-    width: 768px;
+    max-width: 768px;
+    width: 100%;
     padding: 0 50px;
     margin: 0 auto;
   }
 
   .intro__title {
     width: 100%;
-    padding-top: 153px;
-    padding-bottom: 373px;
+    padding-top: 152px;
+    padding-bottom: 152px;
+    min-height: 321px;
     margin: 0;
     font-size: 43px;
     line-height: 50px;
@@ -161,7 +163,7 @@
     background: url("../img/border-pattern-desktop-white.png") repeat-x;
   }
   .intro__wrapper {
-    width: 1150px;
+    max-width: 1150px;
   }
   .intro__title {
     padding-top: 153px;

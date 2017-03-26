@@ -43,7 +43,7 @@
 }
 
 .video__preview {
-  margin-left: -1px;
+  width: 100%;
   position: relative;
 }
 
@@ -94,7 +94,6 @@
   }
   .video__preview {
     order: -1;
-    width: 668px;
     height: 453px;
     margin-bottom: 25px;
   }
