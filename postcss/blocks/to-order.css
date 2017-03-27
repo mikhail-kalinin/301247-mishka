@@ -50,10 +50,12 @@
 }
 
 .to-order__legend {
+  box-sizing: border-box;
   position: relative;
   width: 100%;
   text-transform: uppercase;
   padding: 0;
+  margin: 0;
   margin-bottom: 25px;
   font-size: 17px;
   line-height: 17px;
@@ -124,56 +126,48 @@
   visibility: hidden;
   display: flex;
   margin: 0;
-  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
   height: 40px;
   cursor: pointer;
   margin-right: 22px;
 }
 
-.to-order__input--radio::before, .to-order__input--checkbox::before {
+.to-order__input-btn {
   box-sizing: border-box;
-  visibility: visible;
   position: absolute;
   top: 0;
   left: 0;
-  content: "";
   border: 2px solid #444444;
   transition: 150ms;
+  &--radio {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  &--checkbox {
+    width: 40px;
+    height: 39px;
+    background-position: 50% 10%;
+  }
 }
 
-.to-order__input--radio::before {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
-.to-order__input--radio:hover::before {
+.to-order__label--radio:hover .to-order__input-btn {
   border: 2px solid #62d1ba;
 }
 
-.to-order__input--radio:active::before {
-  border: 2px solid rgba(68, 68, 68, 0.3);
-}
-
-.to-order__input--checkbox::before {
-  width: 40px;
-  height: 39px;
-  background-position: 50% 10%;
-}
-
-.to-order__input--checkbox:hover::before {
+.to-order__label--checkbox:hover .to-order__input-btn {
   border: 2px solid #62d1ba;
 }
 
-.to-order__input--checkbox:active::before {
+.to-order__input--radio:disabled + .to-order__input-btn, .to-order__input--checkbox:disabled + .to-order__input-btn  {
   border: 2px solid rgba(68, 68, 68, 0.3);
 }
 
-.to-order__input--radio:checked::after {
-  visibility: visible;
+.to-order__input--radio:checked + .to-order__input-btn::before {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 10px;
+  left: 10px;
   content: "";
   width: 16px;
   height: 16px;
@@ -181,7 +175,7 @@
   border-radius: 50%;
 }
 
-.to-order__input--checkbox:checked::before {
+.to-order__input--checkbox:checked + .to-order__input-btn {
   background: url("../img/icon-tick.svg") 50% 50% no-repeat;
   background-size: 22px 16px;
 }
@@ -206,6 +200,11 @@
   z-index: 1;
 }
 
+.to-order__label--phone:hover::before {
+  background-image: url("../img/icon-phone-green.svg");
+  opacity: 1;
+}
+
 .to-order__label--email::before {
   content: "";
   position: absolute;
@@ -216,6 +215,11 @@
   background: url("../img/icon-mail.svg") no-repeat;
   opacity: 0.2;
   z-index: 1;
+}
+
+.to-order__label--email:hover::before {
+  background-image: url("../img/icon-mail-green.svg");
+  opacity: 1;
 }
 
 .to-order__input--textarea {
@@ -238,6 +242,7 @@
 @media ($tablet-widths) {
   .to-order__wrapper {
     padding-top: 4px;
+    padding-bottom: 50px;
   }
   .to-order__title {
     position: relative;
@@ -254,7 +259,8 @@
       content: "";
       width: 100%;
       height: 24px;
-      background: url("../img/border-pattern-tablet-white.png") repeat-x;
+      background: url("../img/bg-zigzag-fill.svg") repeat-x;
+      background-size: contain;
     }
   }
   .to-order__desc {
@@ -314,31 +320,33 @@
     }
   }
   .to-order__input--radio {
+    min-width: 52px;
+    max-width: 52px;
+    height: 52px;
+    margin-right: 28px;
+  }
+  .to-order__input--radio + .to-order__input-btn {
     width: 52px;
     height: 52px;
-    margin-right: 28px;
-    &::before {
-      width: 52px;
-      height: 52px;
-    }
-    &:checked::after {
-      width: 22px;
-      height: 22px;
-      top: 15px;
-      left: 15px;
-    }
+  }
+  .to-order__input--radio:checked + .to-order__input-btn::before {
+    width: 21px;
+    height: 21px;
+    top: 14px;
+    left: 14px;
   }
   .to-order__input--checkbox {
-    width: 54px;
+    min-width: 54px;
+    max-width: 54px;
     height: 52px;
     margin-right: 28px;
-    &::before {
-      width: 54px;
-      height: 52px;
-    }
-    &:checked::before {
-      background-size: 33px 22px;
-    }
+  }
+  .to-order__input--checkbox + .to-order__input-btn {
+    width: 54px;
+    height: 52px;
+  }
+  .to-order__input--checkbox:checked + .to-order__input-btn {
+    background-size: 33px 22px;
   }
   .to-order__input--name {
     display: flex;
@@ -425,9 +433,7 @@
     margin-bottom: 85px;
     &::after {
       bottom: -20px;
-      content: "";
       height: 34px;
-      background: url("../img/border-pattern-desktop-white.png") repeat-x;
     }
   }
   .to-order__desc {

@@ -56,7 +56,7 @@
 .modal-cart__label {
   position: relative;
   display: flex;
-  width: 32%;
+  width: 31%;
   height: 52px;
   margin-bottom: 31px;
   justify-content: center;
@@ -77,25 +77,26 @@
   width: 100%;
   height: 52px;
   cursor: pointer;
+  z-index: 1;
 }
 
-.modal-cart__radio::before {
-  visibility: visible;
+.modal-cart__input-btn {
+  box-sizing: border-box;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 52px;
-  content: "";
   border: 2px solid rgba(68, 68, 68, 0.1);
   transition: 150ms;
+  cursor: pointer;
 }
 
-.modal-cart__radio:hover::before {
+.modal-cart__input-btn:hover {
   border: 2px solid rgba(68, 68, 68, 0.3);
 }
 
-.modal-cart__radio:checked::before {
+.modal-cart__radio:checked + .modal-cart__input-btn {
   border: 2px solid #63d1bb;
 }
 
@@ -149,5 +150,8 @@
     font-size: 17px;
     line-height: 30px;
     margin-bottom: 21px;
+  }
+  .modal-cart__label {
+    width: 32%;
   }
 }

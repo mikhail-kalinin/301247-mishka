@@ -1,7 +1,7 @@
 .contacts {
   margin: 0;
   padding: 0;
-  padding-top: 30px;
+  padding-top: 32px;
   padding-bottom: 39px;
   font-size: 15px;
   line-height: 30px;
@@ -17,7 +17,8 @@
 
 .contacts__title {
   margin: 0;
-  margin-bottom: 26px;
+  margin-left: -2px;
+  margin-bottom: 25px;
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
@@ -73,6 +74,14 @@
   background: #eae6dd url("../img/map-mobile@1x.jpg") 50% 50% no-repeat;
 }
 
+@media (max-width: 767px) and (min-resolution: 144dpi),
+       (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .contacts__map-wrapper {
+    background-image: url("../img/map-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
+}
+
 .contacts__item-value--email:hover {
   color: rgba(70, 193, 174, 1);
   border-bottom-color: rgba(70, 193, 174, 1);
@@ -90,7 +99,7 @@
   }
   .contacts__wrapper::before {
     position: absolute;
-    right: 53px;
+    right: 36px;
     top: 0;
     content: "";
     width: 47px;
@@ -98,8 +107,9 @@
     background: url("../img/icon-flag.svg") no-repeat;
   }
   .contacts__title {
-    padding-top: 15px;
-    margin-bottom: 49px;
+    margin-left: -4px;
+    padding-top: 16px;
+    margin-bottom: 48px;
     font-size: 43px;
     line-height: 50px;
   }
@@ -128,6 +138,17 @@
     width: 230px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .contacts__map-wrapper {
+    background-image: url("../img/map-tablet@1x.jpg");
+  }
+}
+
+@media (min-width: 768px) and (min-resolution: 144dpi),
+       (min-width: 768px) and (min-resolution: 1.5dppx) {
+  .contacts__map-wrapper {
+    background-image: url("../img/map-tablet@2x.jpg");
+    background-size: 768px auto;
   }
 }
 
@@ -170,10 +191,19 @@
   .contacts__map-wrapper {
     left: auto;
     width: 525px;
+    background-image: url("../img/map-desktop@1x.jpg");
   }
   .contacts .btn {
     margin: 0;
     order: 3;
     width: 230px;
+  }
+}
+
+@media (min-width: 1150px) and (min-resolution: 144dpi),
+       (min-width: 1150px) and (min-resolution: 1.5dppx) {
+  .contacts__map-wrapper {
+    background-image: url("../img/map-desktop@2x.jpg");
+    background-size: 525px auto;
   }
 }

@@ -10,38 +10,44 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__wrapper center-wrapper">
-        <nav class="main-nav main-nav--closed">
-          <a class="main-nav__toggle" href="#">Открыть меню</a>
-          <ul class="main-nav__list main-nav__list--nav">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__current">Вязание на заказ</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list main-nav__list--add">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Новые поступления</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Распродажа</a>
-            </li>
-          </ul>
-          <div class="page-header__logo">
-            <a class="page-header__link" href="index.html">
+      <div class="page-header__wrapper">
+        <div class="page-header__logo">
+          <a class="page-header__link" href="index.html">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
               <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
-            </a>
+            </picture>
+          </a>
+        </div>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list main-nav__list--nav">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link main-nav__link--current">Вязание на заказ</a>
+              </li>
+            </ul>
+            <ul class="main-nav__list main-nav__list--user-block">
+              <li class="main-nav__item">
+                <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
+              </li>
+              <li class="main-nav__item main-nav__item--cart">
+                <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
+              </li>
+            </ul>
+            <ul class="main-nav__list main-nav__list--add">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Новые поступления</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Распродажа</a>
+              </li>
+            </ul>
           </div>
-          <ul class="main-nav__list main-nav__list--user-block">
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
-            </li>
-            <li class="main-nav__item main-nav__item--cart">
-              <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
-            </li>
-          </ul>
         </nav>
         <span class="page-header__delivery-info">Бесплатная доставка по России</span>
       </div>
@@ -56,45 +62,45 @@
           <form class="to-order__form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="to-order__fieldset">
               <div class="to-order__fieldset-wrapper center-wrapper">
-                <legend class="to-order__legend">Тип</legend>
+                <p class="to-order__legend">Тип</p>
                 <ul class="to-order__field-list">
                   <li class="to-order__field-item">
-                    <label class="to-order__label to-order__label--radio"><input class="to-order__input to-order__input--radio" type="radio" name="type" value="accessory" checked>Аксессуар для интерьера</label>
+                    <label class="to-order__label to-order__label--radio"><input class="to-order__input to-order__input--radio" type="radio" name="type" value="accessory" checked><span class="to-order__input-btn to-order__input-btn--radio"></span>Аксессуар для интерьера</label>
                   </li>
                   <li class="to-order__field-item">
-                    <label class="to-order__label to-order__label--radio"><input class="to-order__input to-order__input--radio" type="radio" name="type" value="toy">Детская игрушка</label>
+                    <label class="to-order__label to-order__label--radio"><input class="to-order__input to-order__input--radio" type="radio" name="type" value="toy"><span class="to-order__input-btn to-order__input-btn--radio"></span>Детская игрушка</label>
                   </li>
                 </ul>
               </div>
             </fieldset>
             <fieldset class="to-order__fieldset">
               <div class="to-order__fieldset-wrapper center-wrapper">
-                <legend class="to-order__legend">Цвет</legend>
+                <p class="to-order__legend">Цвет</p>
                 <ul class="to-order__field-list to-order__field-list--checkbox">
                   <li class="to-order__field-item">
-                    <label class="to-order__label to-order__label--checkbox"><input class="to-order__input to-order__input--checkbox" type="checkbox" name="color" value="white" checked>Белый</label>
+                    <label class="to-order__label to-order__label--checkbox"><input class="to-order__input to-order__input--checkbox" type="checkbox" name="color" value="white" checked><span class="to-order__input-btn to-order__input-btn--checkbox"></span>Белый</label>
                   </li>
                   <li class="to-order__field-item">
-                    <label class="to-order__label to-order__label--checkbox"><input class="to-order__input to-order__input--checkbox" type="checkbox" name="color" value="grey" checked>Серый</label>
+                    <label class="to-order__label to-order__label--checkbox"><input class="to-order__input to-order__input--checkbox" type="checkbox" name="color" value="grey" checked><span class="to-order__input-btn to-order__input-btn--checkbox"></span>Серый</label>
                   </li>
                   <li class="to-order__field-item">
-                    <label class="to-order__label to-order__label--checkbox"><input class="to-order__input to-order__input--checkbox" type="checkbox" name="color" value="tiff">&laquo;Тиффани&raquo;</label>
+                    <label class="to-order__label to-order__label--checkbox"><input class="to-order__input to-order__input--checkbox" type="checkbox" name="color" value="tiff"><span class="to-order__input-btn to-order__input-btn--checkbox"></span>&laquo;Тиффани&raquo;</label>
                   </li>
                   <li class="to-order__field-item">
-                    <label class="to-order__label to-order__label--checkbox"><input class="to-order__input to-order__input--checkbox" type="checkbox" name="color" value="black">Черный</label>
+                    <label class="to-order__label to-order__label--checkbox"><input class="to-order__input to-order__input--checkbox" type="checkbox" name="color" value="black"><span class="to-order__input-btn to-order__input-btn--checkbox"></span>Черный</label>
                   </li>
                   <li class="to-order__field-item">
-                    <label class="to-order__label to-order__label--checkbox"><input class="to-order__input to-order__input--checkbox" type="checkbox" name="color" value="pink">Розовый</label>
+                    <label class="to-order__label to-order__label--checkbox"><input class="to-order__input to-order__input--checkbox" type="checkbox" name="color" value="pink"><span class="to-order__input-btn to-order__input-btn--checkbox"></span>Розовый</label>
                   </li>
                   <li class="to-order__field-item">
-                    <label class="to-order__label to-order__label--checkbox"><input class="to-order__input to-order__input--checkbox" type="checkbox" name="color" value="orange">Оранжевый</label>
+                    <label class="to-order__label to-order__label--checkbox"><input class="to-order__input to-order__input--checkbox" type="checkbox" name="color" value="orange"><span class="to-order__input-btn to-order__input-btn--checkbox"></span>Оранжевый</label>
                   </li>
                 </ul>
               </div>
             </fieldset>
             <fieldset class="to-order__fieldset">
               <div class="to-order__fieldset-wrapper center-wrapper">
-                <legend class="to-order__legend">ФИО</legend>
+                <p class="to-order__legend">ФИО</p>
                 <ul class="to-order__field-list to-order__field-list--name">
                   <li class="to-order__field-item to-order__field-item--name">
                     <label class="to-order__label to-order__label--name">Имя:<input class="to-order__input to-order__input--name" type="text" name="first-name" value="" placeholder="Введите ваше имя*" required></label>
@@ -110,19 +116,19 @@
             </fieldset>
             <fieldset class="to-order__fieldset to-order__fieldset--phone">
               <div class="to-order__fieldset-wrapper center-wrapper">
-                <legend class="to-order__legend to-order__legend--phone">Тел</legend>
+                <p class="to-order__legend to-order__legend--phone">Тел</p>
                 <label class="to-order__label to-order__label--phone"><input class="to-order__input to-order__input--phone" type="tel" name="tel" value="" placeholder="+7 XXX XX XX*" required></label>
               </div>
             </fieldset>
             <fieldset class="to-order__fieldset to-order__fieldset--email">
               <div class="to-order__fieldset-wrapper center-wrapper">
-                <legend class="to-order__legend to-order__legend--email">E-mail</legend>
+                <p class="to-order__legend to-order__legend--email">E-mail</p>
                 <label class="to-order__label to-order__label--email"><input class="to-order__input to-order__input--email" type="email" name="email" value="" placeholder="Ваш Email*" required></label>
               </div>
             </fieldset>
             <fieldset class="to-order__fieldset to-order__fieldset--textarea">
               <div class="to-order__fieldset-wrapper center-wrapper">
-                <legend class="to-order__legend to-order__legend--textarea">Доп</legend>
+                <p class="to-order__legend to-order__legend--textarea">Доп</p>
                 <textarea class="to-order__input to-order__input--textarea" name="additional" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               </div>
             </fieldset>
@@ -138,7 +144,7 @@
       <div class="page-footer__wrapper center-wrapper">
         <div class="page-footer__logo">
           <a class="page-footer__image-link" href="index.html">
-            <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
+            <img src="img/logo-footer.svg" width="86" height="35" alt="Mishka">
           </a>
         </div>
         <section class="page-footer__socials">
@@ -148,8 +154,7 @@
           <a class="page-footer__link page-footer__link--twitter" href="#">Twitter</a>
         </section>
         <section class="page-footer__copyright">
-          <h2 class="page-footer__title">Разработано</h2>
-          <a class="page-footer__link page-footer__link--academy" href="#">HTML academy</a>
+          <h2 class="page-footer__title"><a class="page-footer__copyright-link" href="#">Разработано</a></h2>
         </section>
       </div>
     </footer>
