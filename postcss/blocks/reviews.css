@@ -14,7 +14,8 @@
     content: "";
     width: 100%;
     height: 7px;
-    background: url("../img/border-pattern-small.png") repeat-x;
+    background: url("../img/bg-zigzag-line.svg") repeat-x;
+    background-size: contain;
     opacity: 0.6;
   }
 }
@@ -26,6 +27,7 @@
 
 .reviews__title {
   margin: 0;
+  margin-left: -2px;
   margin-bottom: 24px;
   font-size: 25px;
   line-height: 30px;
@@ -68,7 +70,7 @@
   display: flex;
   width: 130px;
   text-indent: -9999px;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
   padding: 17px 40px 18px 40px;
 
   background-color: #ffffff;
@@ -85,9 +87,11 @@
   }
   &--prev::after {
     background: url("../img/icon-left-arrow.svg") no-repeat;
+    background-size: cover;
   }
   &--next::after {
     background: url("../img/icon-right-arrow.svg") no-repeat;
+    background-size: cover;
   }
 }
 
@@ -109,8 +113,6 @@
     padding-bottom: 24px;
     &::after {
       height: 17px;
-      background: url("../img/border-pattern-tablet-gray.png") repeat-x;
-      opacity: 0.6;
     }
   }
   .reviews__wrapper {
@@ -137,28 +139,37 @@
   }
   .reviews__controls {
     position: absolute;
-    right: 56px;
+    right: 43px;
     bottom: 73px;
   }
   .reviews__btn {
     width: 50px;
     border: none;
     &::after {
-      right: 14px;
+      width: 50px;
+      left: 18px;
     }
   }
   .reviews .btn {
     position: absolute;
     top: 79px;
-    right: 50px;
+    right: 33px;
     width: 175px;
+  }
+}
+
+@media (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+  .reviews__wrapper {
+    background-image: url("../img/review@2x.jpg");
+    background-size: 350px auto;
   }
 }
 
 @media ($desktop-widths) {
   .reviews {
+    margin-bottom: 5px;
     padding-left: 50px;
-    padding-right: 50px;
+    padding-right: 34px;
   }
   .reviews__wrapper {
     max-width: 1050px;
@@ -171,8 +182,6 @@
   .reviews::after {
     left: 0;
     height: 23px;
-    background: url("../img/border-pattern-desktop-gray.png") repeat-x;
-    opacity: 0.6;
   }
   .reviews__title {
     font-size: 53px;
@@ -183,7 +192,7 @@
     padding-right: 100px;
   }
   .reviews__controls {
-    right: 6px;
+    right: 10px;
     bottom: 127px;
   }
   .reviews .btn {

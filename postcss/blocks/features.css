@@ -11,6 +11,7 @@
   margin: 0;
   padding: 0;
   margin-bottom: 29px;
+  margin-left: -2px;
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
@@ -102,5 +103,8 @@
   .features__title {
     font-size: 53px;
     line-height: 57px;
+  }
+  .features__item {
+    width: 350px;
   }
 }
