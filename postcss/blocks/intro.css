@@ -107,6 +107,7 @@
     margin-bottom: 17px;
     background-color: #fafafa;
     background-image: url("../img/hero-desktop@1x.jpg");
+    background-position: center -2px;
     background-repeat: no-repeat;
   }
   .intro::after {
@@ -123,7 +124,7 @@
     flex-wrap: wrap;
     max-width: 768px;
     width: 100%;
-    padding: 0 33px 0 50px;
+    padding: 0 50px;
     margin: 0 auto;
   }
 

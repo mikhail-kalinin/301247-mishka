@@ -20,11 +20,14 @@ function initMap() {
     zoom: 16,
     center: {lat: 59.93673603, lng: 30.32177746}
   });
-
-  var image = "img/icon-map-pin.svg";
+  var image = {
+    url: "img/icon-map-pin.svg",
+    scaledSize: new google.maps.Size(100, 100),
+  }
   var mMarker = new google.maps.Marker({
     position: {lat: 59.93637055, lng: 30.32163799},
     map: map,
+    optimized: false,
     icon: image
   });
 }

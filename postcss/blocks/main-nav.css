@@ -178,6 +178,9 @@
   .main-nav__toggle {
     display: none;
   }
+  .main-nav__item {
+    border-top: none;
+  }
   .main-nav--closed .main-nav__list--user-block {
     display: flex;
     justify-content: flex-end;
@@ -193,7 +196,7 @@
     display: block;
     padding-top: 31px;
     padding-left: 83px;
-    padding-bottom: 33px;
+    padding-bottom: 34px;
   }
   .main-nav__list--user-block .main-nav__link--search::before {
     top: 36px;
@@ -210,6 +213,7 @@
     display: flex;
     position: absolute;
     top: 106px;
+    left: 50px;
     width: auto;
   }
   .main-nav__list--nav .main-nav__link {
@@ -248,13 +252,8 @@
     position: absolute;
     bottom: -69px;
   }
-  .main-nav__list--user-block .main-nav__link {
-    padding-bottom: 33px;
-  }
   .main-nav__list--nav .main-nav__item {
-    width: 217px;
-
-
+    min-width: 217px;
     border-right: 1px solid #ececec;
     &:first-child {
       margin-left: -33px;
@@ -275,6 +274,7 @@
   .main-nav__list--add {
     margin: 0;
     bottom: -42px;
+    left: 50px;
   }
   .main-nav__list--add .main-nav__item {
     border: none;
