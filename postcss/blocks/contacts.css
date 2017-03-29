@@ -50,6 +50,7 @@
   color: #444444;
 
   &--email {
+    min-width: 180px;
     text-decoration: none;
     border-bottom: 1px solid #62d1ba;
     transition: 150ms;
@@ -98,8 +99,8 @@
   }
   .contacts__wrapper::before {
     position: absolute;
-    right: 36px;
-    top: 0;
+    right: 53px;
+    top: 1;
     content: "";
     width: 47px;
     height: 81px;
@@ -127,6 +128,7 @@
     font-size: 17px;
     line-height: 30px;
     &--email {
+      min-width: 205px;
       flex-grow: 0;
     }
   }

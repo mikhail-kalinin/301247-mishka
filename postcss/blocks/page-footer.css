@@ -140,6 +140,22 @@
     padding-top: 2px;
     width: 102px;
     height: 34px;
+    fill: #231f20;
+    transition: 150ms;
+  }
+  .page-footer__image-link:hover {
+    fill: #46c1ae;
+  }
+  .page-footer__image-link:active {
+    fill: #46c1ae;
+    opacity: 0.3;
+  }
+  .page-footer__image-link--current:hover {
+    fill: #231f20;
+  }
+  .page-footer__image-link--current:active {
+    fill: #231f20;
+    opacity: 1;
   }
   .page-footer__copyright-link {
     &::after {

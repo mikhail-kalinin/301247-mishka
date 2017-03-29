@@ -65,7 +65,7 @@
   .page-header__wrapper {
     width: 100%;
     max-width: 768px;
-    padding: 0 31px 0 50px;
+    padding: 0 50px;
     margin: 0 auto;
   }
 
@@ -74,7 +74,7 @@
     display: block;
     position: absolute;
     top: 106px;
-    right: 33px;
+    right: 50px;
   }
   .page-header__logo {
     position: absolute;
@@ -99,17 +99,17 @@
     width: 100%;
     max-width: 1150px;
     margin: 0 auto;
-    padding: 0 34px 0 50px;
+    padding: 0 50px;
   }
   .page-header__logo {
     width:149px;
     height: 72px;
     left: 50%;
-    margin-left: -67px;
+    margin-left: -75px;
     padding-top: 9px;
     padding-bottom: 7px;
   }
   .page-header__delivery-info {
-    right: 35px;
+    right: 50px;
   }
 }

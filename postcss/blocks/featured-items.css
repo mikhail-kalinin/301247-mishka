@@ -32,6 +32,18 @@
   color: #000000;
 }
 
+.featured-items__link {
+  color: #000000;
+  text-decoration: none;
+  transition: 150ms;
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .featured-items__item-of-week {
   display: block;
   padding: 0;
@@ -188,6 +200,7 @@
     position: relative;
   }
   .featured-items__item-title {
+    width: 100%;
     position: absolute;
     top: 54px;
     left: 20px;

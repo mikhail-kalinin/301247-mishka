@@ -100,11 +100,13 @@
     margin-bottom: 63px;
   }
   .video__container {
+    line-height: 0;
     position: relative;
     top: 0;
     order: -1;
     width: 100%;
-    height: 455px;
+    min-height: 443px;
+    height: auto;
   }
   .video__desc {
     padding-top: 12px;
@@ -149,12 +151,12 @@
   .video__item {
     flex-direction: row;
     justify-content: space-between;
-    min-height: 455px;
+    min-height: 444px;
     margin-bottom: 103px;
   }
   .video__container {
     width: 682px;
-    height: 455px;
+    height: auto;
     margin-bottom: 0;
   }
   .video__desc {
