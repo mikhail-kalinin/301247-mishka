@@ -39,7 +39,7 @@
               <li class="main-nav__item">
                 <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
               </li>
-              <li class="main-nav__item main-nav__item--cart">
+              <li class="main-nav__item">
                 <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
               </li>
             </ul>
@@ -50,10 +50,12 @@
               <li class="main-nav__item">
                 <a class="main-nav__link" href="#">Распродажа</a>
               </li>
+              <li class="main-nav__item">
+                <p class="main-nav__delivery-info">Бесплатная доставка по России</p>
+              </li>
             </ul>
           </div>
         </nav>
-        <span class="page-header__delivery-info">Бесплатная доставка по России</span>
       </div>
     </header>
     <main>
@@ -67,7 +69,7 @@
             <fieldset class="to-order__fieldset">
               <div class="to-order__fieldset-wrapper center-wrapper">
                 <p class="to-order__legend">Тип</p>
-                <ul class="to-order__field-list">
+                <ul class="to-order__field-list to-order__field-list--radio">
                   <li class="to-order__field-item">
                     <label class="to-order__label to-order__label--radio"><input class="to-order__input to-order__input--radio" type="radio" name="type" value="accessory" checked><span class="to-order__input-btn to-order__input-btn--radio"></span>Аксессуар для интерьера</label>
                   </li>
@@ -120,20 +122,17 @@
             </fieldset>
             <fieldset class="to-order__fieldset to-order__fieldset--phone">
               <div class="to-order__fieldset-wrapper center-wrapper">
-                <p class="to-order__legend to-order__legend--phone">Тел</p>
-                <label class="to-order__label to-order__label--phone"><input class="to-order__input to-order__input--phone" type="tel" name="tel" value="" placeholder="+7 XXX XX XX*" required><span class="to-order__input-icon to-order__input-icon--phone"></span></label>
+                <label class="to-order__legend to-order__legend--phone">Тел<input class="to-order__input to-order__input--phone" type="tel" name="tel" value="" placeholder="+7 XXX XX XX*" required><span class="to-order__input-icon to-order__input-icon--phone"></span></label>
               </div>
             </fieldset>
             <fieldset class="to-order__fieldset to-order__fieldset--email">
               <div class="to-order__fieldset-wrapper center-wrapper">
-                <p class="to-order__legend to-order__legend--email">E-mail</p>
-                <label class="to-order__label to-order__label--email"><input class="to-order__input to-order__input--email" type="email" name="email" value="" placeholder="Ваш Email*" required><span class="to-order__input-icon to-order__input-icon--email"></span></label>
+                <label class="to-order__legend to-order__legend--email">E-mail<input class="to-order__input to-order__input--email" type="email" name="email" value="" placeholder="Ваш Email*" required><span class="to-order__input-icon to-order__input-icon--email"></span></label>
               </div>
             </fieldset>
             <fieldset class="to-order__fieldset to-order__fieldset--textarea">
               <div class="to-order__fieldset-wrapper center-wrapper">
-                <p class="to-order__legend to-order__legend--textarea">Доп</p>
-                <textarea class="to-order__input to-order__input--textarea" name="additional" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                <label class="to-order__legend to-order__legend--textarea">Доп<textarea class="to-order__input to-order__input--textarea" name="additional" placeholder="Опишите все ваши пожелания к заказу"></textarea></label>
               </div>
             </fieldset>
             <div class="to-order__submit center-wrapper">

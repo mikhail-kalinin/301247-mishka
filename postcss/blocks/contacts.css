@@ -97,16 +97,17 @@
     padding-top: 42px;
     padding-bottom: 57px;
   }
-  .contacts__wrapper::before {
+  .contacts__title::before {
     position: absolute;
-    right: 53px;
-    top: 1;
+    right: 3px;
+    top: 1px;
     content: "";
     width: 47px;
     height: 81px;
     background: url("../img/icon-flag.svg") no-repeat;
   }
   .contacts__title {
+    position: relative;
     margin-left: -4px;
     padding-top: 16px;
     margin-bottom: 48px;
@@ -166,8 +167,8 @@
     height: 457px;
     flex-wrap: wrap;
   }
-  .contacts__wrapper::before {
-    left: 113px;
+  .contacts__title::before {
+    left: -106px;
     top: 62px;
   }
   .contacts__title {
